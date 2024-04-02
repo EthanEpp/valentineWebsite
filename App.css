@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/aurebesh");
+
+.valentine-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Dancing Script", cursive;
+}
+.valentine-container-aurebesh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Aurebesh", sans-serif;
+}
+
+.valentine-question {
+  font-size: 1em; /* Adjusts the font size */
+  margin: 20px 0; /* Adds some spacing around the question for better layout */
+}
+
+.valentine-question-aurebesh {
+  font-size: 2em; /* Adjusts the font size */
+  margin: 20px 0; /* Adds some spacing around the question for better layout */
+  font-family: "Aurebesh", sans-serif;
+}
+
+.yes-aurebesh {
+  /* font-size: 1em; */
+  /* margin: 20px 0;  */
+  font-family: "Aurebesh", sans-serif;
+  color: white;
+}
+
+.yes-dance {
+  font-size: 0.5em; /* Adjusts the font size */
+  /* margin: 20px 0; */
+  /* font-family: "Dancing Script", cursive; */
+  font-family: Verdana, sans-serif;
+  color: rgb(95, 95, 95);
+}
+
+.valentine-container div {
+  display: flex; /* This makes the container a flexbox container */
+  justify-content: center; /* This centers the children horizontally */
+  align-items: center; /* This centers the children vertically, not necessary if they are the same height */
+  flex-direction: row; /* This ensures the children are laid out horizontally */
+  margin: 10px 0; /* Adds vertical spacing between elements */
+  text-align: center; /* Centers the text */
+}
+
+button {
+  margin: 10px; /* Adds spacing around buttons */
+  padding: 8px 16px; /* Adds padding inside the buttons for better sizing */
+  border: none; /* Removes the default border */
+  border-radius: 5px; /* Adds rounded corners */
+  cursor: pointer; /* Changes the cursor on hover */
+  transition:
+    background-color 0.3s,
+    transform 0.2s; /* Smooth background color change and slight transform on hover */
+}
+
+button:hover {
+  transform: scale(1.05); /* Slightly enlarges the button when hovered */
+}
+
+.yesButton {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+}
+
+.noButton {
+  display: flex; /* Enables flexbox layout within the button */
+  justify-content: center; /* Centers content horizontally within the button */
+  align-items: center; /* Centers content vertically within the button */
+  flex-direction: column; /* Changes the layout of children to be vertical */
+  width: 60px; /* Keeps button width fixed */
+  height: 200px; /* Adjusted for tall, narrow appearance */
+  background-color: #f44336; /* Red background */
+  color: white; /* White text */
+}
+
+/* Base styling for both buttons */
+button {
+  color: white;
+  padding: 20px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px; /* Rounded corners for the lightsaber blade */
+  /* text-transform: uppercase; */
+  font-family: "Aurebesh", sans-serif;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  height: 300px;
+  position: relative; /* Necessary for positioning pseudo-elements */
+  overflow: visible; /* Adjusted to visible to allow hilt to show below button */
+  margin: 10px 30px;
+  margin-bottom: 100px;
+  /* margin-bottom: 40px; */
+}
+
+/* Glow effect */
+button:hover {
+  transform: scale(1.1); /* Slightly enlarges the button */
+  box-shadow: 0 0 20px 5px; /* Larger glow effect */
+}
+
+/* Yes Button - Green Lightsaber */
+.yesButton {
+  background: linear-gradient(to right, #00ff00 15%, #c0ffc0 50%, #00ff00 85%);
+  /* background: linear-gradient(
+    #00ff00,
+    #ffffff,
+    #00ff00
+  ); */
+  box-shadow: 0 0 20px 10px #66ff66; /* Intensifies the glow when hovered */
+}
+
+.yesButton:hover {
+  box-shadow: 0 0 30px 20px #66ff66; /* Intensifies the glow when hovered */
+}
+
+/* No Button - Red Lightsaber */
+
+.noButton {
+  background: linear-gradient(to right, #ff0000 10%, #ffc0c0 50%, #ff0000 90%);
+  align-items: center; /* Centers content vertically within the button */
+  box-shadow: 0 0 20px 10px #ff6666; /* Intensifies the glow when hovered */
+  width: 60px; /* Fixed width */
+  height: 300px; /* Fixed height */
+}
+
+.noButton:hover {
+  box-shadow: 0 0 30px 20px #ff6666; /* Intensifies the glow when hovered */
+}
+
+/* Hilt Design Adjustments */
+button::after {
+  content: "";
+  position: absolute;
+  /* bottom: -10px;  */
+
+  bottom: -95px;
+  left: 0;
+  /* width: 100%;  */
+  left: 5%;
+  transform: translateX(-50%);
+  width: 90%; /* Adjust width to create a tapered effect if desired */
+  /* height: 14px; */
+  height: 100px;
+  background: #777; /* Hilt color */
+  border-radius: 3px; /* Slightrounding at the edges of the hilt */
+  transform: translateX(0%); /* Adjusted to remove translation */
+  background: linear-gradient(
+    to right,
+    #bbb,
+    #888,
+    #bbb
+  ); /* Simulates metallic sheen */
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Adds depth */
+}
+
+/* Additional hilt detail for realism */
+button::before {
+  content: "";
+  position: absolute;
+  /* bottom: -14px;  */
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%; /* Represents a control or power indicator */
+  height: 10px;
+  background: #ddd; /* Lighter color for contrast */
+  border-radius: 1px;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2); /* Adds an inset shadow for depth */
+}
